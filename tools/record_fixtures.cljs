@@ -11,7 +11,7 @@
    a fixture can never be something the reference itself rejects."
   (:require ["node:child_process" :as cp]
             ["node:fs" :as fs]
-            [clojure.string :as str]))
+            [kotoba.lang.text :as str]))
 
 (def ^:private cases
   ;; [name encoder] — 0.12 s of a sine wave keeps each file under 4 KB while
