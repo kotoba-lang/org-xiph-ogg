@@ -11,10 +11,10 @@ The Ogg container, both directions, portable `.cljc`, zero dependencies.
 - **Both directions are checked against ffmpeg**, including a file we muxed being
   decoded by it. A container writer that only satisfies its own reader proves
   nothing.
-- **`test/ogg/fixtures.cljk` is generated** — `nbb tools/record_fixtures.cljk`,
+- **`test/ogg/fixtures.cljk` is generated** — `kbb --backend sci tools/record_fixtures.cljk`,
   which confirms ffmpeg decodes each file before recording it.
 - **Every failure is an `ex-info` with a `:reason`.**
-- **Both runtimes are gated** (`clojure -M:test`, `nbb run-tests.cljk`).
+- **Both runtimes are gated** (`kbb -M:test`, `kbb --backend sci run-tests.cljk`).
 
 ## Traps
 
