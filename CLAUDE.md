@@ -6,15 +6,15 @@ The Ogg container, both directions, portable `.cljc`, zero dependencies.
 
 - **This repo decodes no codec.** Ogg carries packets; Opus/Vorbis/FLAC live
   elsewhere. `identify` sniffs a first packet and stops there.
-- **ffmpeg appears in tests only** (`test/ogg/ogg_oracle_test.clj`,
-  `tools/record_fixtures.cljs`), never in `src/`.
+- **ffmpeg appears in tests only** (`test/ogg/ogg_oracle_test.cljk`,
+  `tools/record_fixtures.cljk`), never in `src/`.
 - **Both directions are checked against ffmpeg**, including a file we muxed being
   decoded by it. A container writer that only satisfies its own reader proves
   nothing.
-- **`test/ogg/fixtures.cljc` is generated** — `nbb tools/record_fixtures.cljs`,
+- **`test/ogg/fixtures.cljk` is generated** — `nbb tools/record_fixtures.cljk`,
   which confirms ffmpeg decodes each file before recording it.
 - **Every failure is an `ex-info` with a `:reason`.**
-- **Both runtimes are gated** (`clojure -M:test`, `nbb run-tests.cljs`).
+- **Both runtimes are gated** (`clojure -M:test`, `nbb run-tests.cljk`).
 
 ## Traps
 
@@ -45,4 +45,4 @@ The Ogg container, both directions, portable `.cljc`, zero dependencies.
 | `ogg.crc` | the init-0/no-xorout CRC-32 variant |
 | `ogg.page` | page parse, `build` (from packets) and `build-raw` (explicit segments), `lacing` |
 | `ogg.stream` | packet reassembly across pages, muxing with splitting and `:flush-after` |
-| `tools/record_fixtures.cljs` | regenerates the recorded reference containers |
+| `tools/record_fixtures.cljk` | regenerates the recorded reference containers |
