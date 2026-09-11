@@ -61,7 +61,7 @@ them: Ogg carries *packets*, not samples.
 
 ```sh
 clojure -M:test      # JVM: portable suite + ffmpeg in both directions
-nbb run-tests.cljs   # ClojureScript: the portable suite, recorded containers
+nbb run-tests.cljk   # ClojureScript: the portable suite, recorded containers
 clojure -M:lint
 ```
 
@@ -74,7 +74,7 @@ pages — the check that would catch a wrong checksummed region.
 Regenerate the fixtures with:
 
 ```sh
-nbb tools/record_fixtures.cljs   # confirms ffmpeg decodes each one before writing
+nbb tools/record_fixtures.cljk   # confirms ffmpeg decodes each one before writing
 ```
 
 ## Not supported

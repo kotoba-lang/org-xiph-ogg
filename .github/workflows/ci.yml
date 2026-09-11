@@ -41,7 +41,7 @@ jobs:
         run: clojure -M:lint
 
   cljs:
-    name: nbb run-tests.cljs (ClojureScript)
+    name: nbb run-tests.cljk (ClojureScript)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -50,4 +50,4 @@ jobs:
           node-version: '22'
       - run: npm install -g nbb@1.4.210
       # zero dependencies: the recorded containers are checked in
-      - run: nbb run-tests.cljs
+      - run: nbb run-tests.cljk
