@@ -1,7 +1,7 @@
 (ns record-fixtures
   "Regenerate test/ogg/fixtures.cljk from real Ogg files produced by ffmpeg.
 
-       nbb tools/record_fixtures.cljk
+       kbb --backend sci tools/record_fixtures.cljk
 
    The portable suite must assert conformance against real containers on
    ClojureScript, where there is no shell and no filesystem, so short reference
