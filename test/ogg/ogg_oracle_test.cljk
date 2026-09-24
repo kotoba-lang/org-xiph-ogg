@@ -11,7 +11,7 @@
   (:require [clojure.java.io :as io]
             [clojure.java.shell :as shell]
             [kotoba.lang.text :as str]
-            [clojure.test :refer [deftest is testing]]
+            [kotoba.test :refer [deftest is testing]]
             [ogg.core :as ogg]
             [ogg.page :as page])
   (:import [java.io File]
