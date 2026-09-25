@@ -3,7 +3,7 @@
 
    The oracle suite adds what a recording cannot — handing our *muxed* output
    back to ffmpeg."
-  (:require [ogg.core :as ogg]
+  (:require [kotoba.bytes :as kbytes] [ogg.core :as ogg]
             [ogg.crc :as crc]
             [ogg.fixtures :as fixtures]
             [ogg.page :as page]
@@ -13,7 +13,7 @@
 
 (defn- b64->bytes [s]
   #?(:clj (mapv #(bit-and (int %) 0xff)
-                (.decode (java.util.Base64/getDecoder) ^String s))
+                (kbytes/base64-decode-bytes ^String s))
      :cljs (let [d (js/atob s)]
              (mapv #(.charCodeAt d %) (range (.-length d))))))
 
