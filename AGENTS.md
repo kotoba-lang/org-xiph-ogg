@@ -1,4 +1,4 @@
-# CLAUDE.md — org-xiph-ogg
+# AGENTS.md — org-xiph-ogg
 
 The Ogg container, both directions, portable `.cljc`, zero dependencies.
 
